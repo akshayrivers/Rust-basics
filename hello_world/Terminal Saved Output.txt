@@ -1,0 +1,404 @@
+Last login: Sat Oct 26 21:46:16 on ttys005
+vinodakshat@vinods-MacBook-Air ~ % neovim --version
+zsh: command not found: neovim
+vinodakshat@vinods-MacBook-Air ~ % vim --version 
+VIM - Vi IMproved 9.0 (2022 Jun 28, compiled Aug  3 2024 14:50:46)
+macOS version - arm64
+Included patches: 1-2136, 2142
+Compiled by root@apple.com
+Normal version without GUI.  Features included (+) or not (-):
++acl               +file_in_path      +mouse_urxvt       -tag_any_white
+-arabic            +find_in_path      +mouse_xterm       -tcl
++autocmd           +float             +multi_byte        +termguicolors
++autochdir         +folding           +multi_lang        +terminal
+-autoservername    -footer            -mzscheme          +terminfo
+-balloon_eval      +fork()            +netbeans_intg     +termresponse
+-balloon_eval_term -gettext           +num64             +textobjects
+-browse            -hangul_input      +packages          +textprop
+++builtin_terms    +iconv             +path_extra        +timers
++byte_offset       +insert_expand     -perl              +title
++channel           +ipv6              +persistent_undo   -toolbar
++cindent           +job               +popupwin          +user_commands
+-clientserver      +jumplist          +postscript        -vartabs
++clipboard         -keymap            +printer           +vertsplit
++cmdline_compl     +lambda            -profile           +vim9script
++cmdline_hist      -langmap           -python            +viminfo
++cmdline_info      +libcall           -python3           +virtualedit
++comments          +linebreak         +quickfix          +visual
++conceal           +lispindent        +reltime           +visualextra
++cryptv            +listcmds          -rightleft         +vreplace
++cscope            +localmap          -ruby              +wildignore
++cursorbind        -lua               +scrollbind        +wildmenu
++cursorshape       +menu              +signs             +windows
++dialog_con        +mksession         +smartindent       +writebackup
++diff              +modify_fname      -sodium            -X11
++digraphs          +mouse             -sound             -xattr
+-dnd               -mouseshape        +spell             -xfontset
+-ebcdic            +mouse_dec         +startuptime       -xim
+-emacs_tags        -mouse_gpm         +statusline        -xpm
++eval              -mouse_jsbterm     -sun_workshop      -xsmp
++ex_extra          +mouse_netterm     +syntax            -xterm_clipboard
++extra_search      +mouse_sgr         +tag_binary        -xterm_save
+-farsi             -mouse_sysmouse    -tag_old_static    
+   system vimrc file: "$VIM/vimrc"
+     user vimrc file: "$HOME/.vimrc"
+ 2nd user vimrc file: "~/.vim/vimrc"
+      user exrc file: "$HOME/.exrc"
+       defaults file: "$VIMRUNTIME/defaults.vim"
+  fall-back for $VIM: "/usr/share/vim"
+Compilation: gcc -c -I. -Iproto -DHAVE_CONFIG_H   -DMACOS_X_UNIX  -g -O2 -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=1      
+Linking: gcc   -L/usr/local/lib -o vim        -lm -lncurses  -liconv -framework Cocoa           
+vinodakshat@vinods-MacBook-Air ~ % brew install neovim
+==> Auto-updating Homebrew...
+Adjust how often this is run with HOMEBREW_AUTO_UPDATE_SECS or disable with
+HOMEBREW_NO_AUTO_UPDATE. Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+Error: Failed to download https://formulae.brew.sh/api/formula.jws.json!
+Failed to download https://formulae.brew.sh/api/cask.jws.json!
+Failed to download https://formulae.brew.sh/api/cask_tap_migrations.jws.json!
+==> Auto-updated Homebrew!
+Updated 2 taps (ngrok/ngrok and homebrew/services).
+
+You have 6 outdated formulae and 1 outdated cask installed.
+
+==> Downloading https://formulae.brew.sh/api/formula.jws.json
+curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to formulae.brew.sh:443                                                                                                                    
+
+Warning: formula.jws.json: update failed, falling back to cached version.
+==> Downloading https://formulae.brew.sh/api/cask.jws.json
+curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to formulae.brew.sh:443                                                                                                                    
+
+Warning: cask.jws.json: update failed, falling back to cached version.
+==> Downloading https://ghcr.io/v2/homebrew/core/neovim/manifests/0.10.2_1
+##################################################################################################################################################################################################### 100.0%
+==> Fetching dependencies for neovim: libvterm, msgpack, libunistring, libuv, lpeg, luajit, luv, tree-sitter and unibilium
+==> Downloading https://ghcr.io/v2/homebrew/core/libvterm/manifests/0.3.3
+##################################################################################################################################################################################################### 100.0%
+==> Fetching libvterm
+==> Downloading https://ghcr.io/v2/homebrew/core/libvterm/blobs/sha256:1f9b512f3881f954e48acad23f8c6bcdc76ee979c89baaf0cabb9438843be999
+##################################################################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/msgpack/manifests/6.1.0
+##################################################################################################################################################################################################### 100.0%
+==> Fetching msgpack
+==> Downloading https://ghcr.io/v2/homebrew/core/msgpack/blobs/sha256:fef7b080476f8c2ea5d3478775fb8ba7861cb2c5b25a5c06a575eabf303d6085
+curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to pkg-containers.githubusercontent.com:443                                                                                                
+
+Error: neovim: Failed to download resource "msgpack"
+Download failed: https://ghcr.io/v2/homebrew/core/msgpack/blobs/sha256:fef7b080476f8c2ea5d3478775fb8ba7861cb2c5b25a5c06a575eabf303d6085
+vinodakshat@vinods-MacBook-Air ~ % nvim --version
+zsh: command not found: nvim
+vinodakshat@vinods-MacBook-Air ~ % neovim --version
+zsh: command not found: neovim
+vinodakshat@vinods-MacBook-Air ~ % brew cleanup
+brew install neovim
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/aom--3.10.0... (3.9MB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/brotli--1.1.0... (374.3KB)
+Removing: /opt/homebrew/Cellar/ca-certificates/2024-07-02... (4 files, 231.3KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/ca-certificates_bottle_manifest--2024-07-02... (1.8KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/cairo--1.18.2... (738.5KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/fontconfig--2.15.0... (633.6KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/freetype--2.13.3... (937.6KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/fribidi--1.0.16... (96KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/gettext_bottle_manifest--0.22.5... (10KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/gettext--0.22.5... (10.2MB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/ghostscript--10.04.0... (39.7MB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/giflib--5.2.2... (149.2KB)
+Warning: Skipping glib: most recent version 2.82.2 not installed
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/glib--2.82.1... (8.5MB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/graphite2--1.3.14... (89.4KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/harfbuzz_bottle_manifest--10.0.1_1... (28.5KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/harfbuzz--10.0.1_1... (2.5MB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/highway--1.2.0... (733.9KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/icu4c--74.2... (28.9MB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/icu4c@75--75.1... (29MB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/imagemagick--7.1.1-39... (10.7MB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/imath--3.1.12... (186.6KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/jasper--4.2.4... (465.7KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/jbig2dec--0.20... (123.6KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/jpeg-turbo--3.0.4... (1.1MB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/jpeg-xl--0.11.0_1... (13.4MB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/krb5--1.21.3... (1.3MB)
+Warning: Skipping leptonica: most recent version 1.85.0 not installed
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/leptonica--1.84.1... (2.6MB)
+Warning: Skipping libarchive: most recent version 3.7.7 not installed
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/libarchive--3.7.6... (1.5MB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/libb2--0.98.1... (36.0KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/libde265--1.0.15... (446.6KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/libdeflate--1.22... (108.0KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/libheif--1.18.2... (1.7MB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/libidn--1.42... (287.4KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/libidn2--2.3.7... (329KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/liblqr--0.4.3... (65.3KB)
+Warning: Skipping libomp: most recent version 19.1.2 not installed
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/libomp--19.1.0... (573.2KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/libpng--1.6.44... (449.4KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/libraw--0.21.3... (1.8MB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/libtiff--4.7.0... (1.8MB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/libtool--2.5.3... (1MB)
+Warning: Skipping libunistring: most recent version 1.3 not installed
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/libunistring--1.2... (1.6MB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/libvmaf--3.0.0... (1MB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/libx11--1.8.10... (2.1MB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/libxau--1.0.11... (30KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/libxcb--1.17.0... (977.2KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/libxdmcp--1.1.5... (35.7KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/libxext--1.3.6... (105.6KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/libxrender--0.9.11... (51.6KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/little-cms2--2.16... (420KB)
+Removing: /opt/homebrew/Cellar/lz4/1.9.4... (23 files, 638.5KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/lz4_bottle_manifest--1.9.4... (9.9KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/lz4--1.10.0... (268.7KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/lzo--2.10... (143.9KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/m4--1.4.19... (253KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/mpdecimal--4.0.0... (178.0KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/ncurses--6.5... (2.4MB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/openexr--3.3.1... (1.4MB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/openjpeg--2.5.2... (2MB)
+Removing: /opt/homebrew/Cellar/openssl@3/3.3.1... (6,982 files, 32.5MB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/openssl@3--3.3.2... (9.6MB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/pango--1.54.0... (817KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/pcre2--10.44... (2MB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/pixman--0.42.2... (378.2KB)
+Warning: Skipping postgresql@14: most recent version 14.13_2 not installed
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/postgresql@14--14.13_1... (11.5MB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/python@3.12--3.12.7_1... (15.6MB)
+Removing: /opt/homebrew/Cellar/readline/8.2.10... (51 files, 1.7MB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/readline_bottle_manifest--8.2.10... (8.0KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/readline--8.2.13... (576.4KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/shared-mime-info--2.4... (1.1MB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/sqlite--3.46.1... (2.2MB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/tesseract--5.4.1_1... (12.6MB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/webp--1.4.0... (874.8KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/wget--1.24.5... (1.5MB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/x265--3.6... (3.5MB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/xorgproto--2024.1... (699.7KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/xz--5.6.3... (584.7KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/zbar--0.23.93... (307.5KB)
+Removing: /Users/vinodakshat/Library/Caches/Homebrew/zstd--1.5.6... (758.6KB)
+==> Autoremoving 1 unneeded formula:
+icu4c
+Uninstalling /opt/homebrew/Cellar/icu4c/74.2... (271 files, 77.9MB)
+Pruned 0 symbolic links and 2 directories from /opt/homebrew
+Removing: /opt/homebrew/Library/Homebrew/vendor/portable-ruby/3.3.3... (1,565 files, 31.9MB)
+Removing: /opt/homebrew/Library/Homebrew/vendor/portable-ruby/3.3.4_1... (1,588 files, 32MB)
+==> This operation has freed approximately 342.8MB of disk space.
+==> Downloading https://ghcr.io/v2/homebrew/core/neovim/manifests/0.10.2_1
+Already downloaded: /Users/vinodakshat/Library/Caches/Homebrew/downloads/7886d43c91c1d038dc97c4686f12edc98f59aa05a2099e430f5f652914080696--neovim-0.10.2_1.bottle_manifest.json
+==> Fetching dependencies for neovim: libvterm, msgpack, libunistring, libuv, lpeg, luajit, luv, tree-sitter and unibilium
+==> Downloading https://ghcr.io/v2/homebrew/core/libvterm/manifests/0.3.3
+Already downloaded: /Users/vinodakshat/Library/Caches/Homebrew/downloads/b5fadcaa02193cc4a1b7ba1b24eddec6a6a95bd8004f5e0c493a4d9673b5410b--libvterm-0.3.3.bottle_manifest.json
+==> Fetching libvterm
+==> Downloading https://ghcr.io/v2/homebrew/core/libvterm/blobs/sha256:1f9b512f3881f954e48acad23f8c6bcdc76ee979c89baaf0cabb9438843be999
+Already downloaded: /Users/vinodakshat/Library/Caches/Homebrew/downloads/9abacf29e786c2ef073d9ce2b72bc24e127533d499055a6f7241a7d24f4c7af3--libvterm--0.3.3.arm64_sequoia.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/msgpack/manifests/6.1.0
+Already downloaded: /Users/vinodakshat/Library/Caches/Homebrew/downloads/64deb06ebbeaaf491c089ce032ab47d3a2fd7017a0d42f92620a8feed75d9e28--msgpack-6.1.0.bottle_manifest.json
+==> Fetching msgpack
+==> Downloading https://ghcr.io/v2/homebrew/core/msgpack/blobs/sha256:fef7b080476f8c2ea5d3478775fb8ba7861cb2c5b25a5c06a575eabf303d6085
+##################################################################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libunistring/manifests/1.3
+##################################################################################################################################################################################################### 100.0%
+==> Fetching libunistring
+==> Downloading https://ghcr.io/v2/homebrew/core/libunistring/blobs/sha256:3cd26bae2d5fcf61294f14c18e5e7ec773a59ed1bf710fb92055e0db0244e909
+curl: (35) LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to pkg-containers.githubusercontent.com:443                                                                                                
+
+Error: neovim: Failed to download resource "libunistring"
+Download failed: https://ghcr.io/v2/homebrew/core/libunistring/blobs/sha256:3cd26bae2d5fcf61294f14c18e5e7ec773a59ed1bf710fb92055e0db0244e909
+vinodakshat@vinods-MacBook-Air ~ % brew install neovim
+==> Downloading https://ghcr.io/v2/homebrew/core/neovim/manifests/0.10.2_1
+Already downloaded: /Users/vinodakshat/Library/Caches/Homebrew/downloads/7886d43c91c1d038dc97c4686f12edc98f59aa05a2099e430f5f652914080696--neovim-0.10.2_1.bottle_manifest.json
+==> Fetching dependencies for neovim: libvterm, msgpack, libunistring, libuv, lpeg, luajit, luv, tree-sitter and unibilium
+==> Downloading https://ghcr.io/v2/homebrew/core/libvterm/manifests/0.3.3
+Already downloaded: /Users/vinodakshat/Library/Caches/Homebrew/downloads/b5fadcaa02193cc4a1b7ba1b24eddec6a6a95bd8004f5e0c493a4d9673b5410b--libvterm-0.3.3.bottle_manifest.json
+==> Fetching libvterm
+==> Downloading https://ghcr.io/v2/homebrew/core/libvterm/blobs/sha256:1f9b512f3881f954e48acad23f8c6bcdc76ee979c89baaf0cabb9438843be999
+Already downloaded: /Users/vinodakshat/Library/Caches/Homebrew/downloads/9abacf29e786c2ef073d9ce2b72bc24e127533d499055a6f7241a7d24f4c7af3--libvterm--0.3.3.arm64_sequoia.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/msgpack/manifests/6.1.0
+Already downloaded: /Users/vinodakshat/Library/Caches/Homebrew/downloads/64deb06ebbeaaf491c089ce032ab47d3a2fd7017a0d42f92620a8feed75d9e28--msgpack-6.1.0.bottle_manifest.json
+==> Fetching msgpack
+==> Downloading https://ghcr.io/v2/homebrew/core/msgpack/blobs/sha256:fef7b080476f8c2ea5d3478775fb8ba7861cb2c5b25a5c06a575eabf303d6085
+Already downloaded: /Users/vinodakshat/Library/Caches/Homebrew/downloads/c5ed6d68bdcf22214524d7390321bd0efcf8693d8b51092ed1e17b1f07777440--msgpack--6.1.0.arm64_sequoia.bottle.tar.gz
+==> Downloading https://ghcr.io/v2/homebrew/core/libunistring/manifests/1.3
+Already downloaded: /Users/vinodakshat/Library/Caches/Homebrew/downloads/a570da63bc1839c7e217f203abd54d4d873ebd6b99f6e88994d0e79e2ebe987c--libunistring-1.3.bottle_manifest.json
+==> Fetching libunistring
+==> Downloading https://ghcr.io/v2/homebrew/core/libunistring/blobs/sha256:3cd26bae2d5fcf61294f14c18e5e7ec773a59ed1bf710fb92055e0db0244e909
+##################################################################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/libuv/manifests/1.49.2
+##################################################################################################################################################################################################### 100.0%
+==> Fetching libuv
+==> Downloading https://ghcr.io/v2/homebrew/core/libuv/blobs/sha256:0b28a00add187590626c395c52a9295857fc1320e9ff0b8dd9fe726f4614ebcf
+##################################################################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/lpeg/manifests/1.1.0-1
+##################################################################################################################################################################################################### 100.0%
+==> Fetching lpeg
+==> Downloading https://ghcr.io/v2/homebrew/core/lpeg/blobs/sha256:af50e5ff5ff953cb182ffb7657fdbf5fbfc9958f12be114c6713d7e62190c421
+##################################################################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/luajit/manifests/2.1.1727870382
+##################################################################################################################################################################################################### 100.0%
+==> Fetching luajit
+==> Downloading https://ghcr.io/v2/homebrew/core/luajit/blobs/sha256:70d41bd527edfe2b0bc41e19880ac406fc4a4f4ef899e74bb507a38e177463b2
+##################################################################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/luv/manifests/1.48.0-2
+##################################################################################################################################################################################################### 100.0%
+==> Fetching luv
+==> Downloading https://ghcr.io/v2/homebrew/core/luv/blobs/sha256:6fc436592e7512c75133cd501da7005a0ca564122198a20cdb28305ea0dc7f4d
+##################################################################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/tree-sitter/manifests/0.24.3
+##################################################################################################################################################################################################### 100.0%
+==> Fetching tree-sitter
+==> Downloading https://ghcr.io/v2/homebrew/core/tree-sitter/blobs/sha256:2a00912caca6753ad531eee46172ed9335587bacabf405cc8deb8091f1918941
+##################################################################################################################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/unibilium/manifests/2.1.2
+##################################################################################################################################################################################################### 100.0%
+==> Fetching unibilium
+==> Downloading https://ghcr.io/v2/homebrew/core/unibilium/blobs/sha256:c154ef3c2f532ebb1e73372a76230d144057983813624abbad7ca85d1ce3a2b8
+##################################################################################################################################################################################################### 100.0%
+==> Fetching neovim
+==> Downloading https://ghcr.io/v2/homebrew/core/neovim/blobs/sha256:b74c4a50c70b5d6b869ffec9956e971d14ea7f26e73e1ae058f355267f1226a5
+##################################################################################################################################################################################################### 100.0%
+==> Installing dependencies for neovim: libvterm, msgpack, libunistring, libuv, lpeg, luajit, luv, tree-sitter and unibilium
+==> Installing neovim dependency: libvterm
+==> Downloading https://ghcr.io/v2/homebrew/core/libvterm/manifests/0.3.3
+Already downloaded: /Users/vinodakshat/Library/Caches/Homebrew/downloads/b5fadcaa02193cc4a1b7ba1b24eddec6a6a95bd8004f5e0c493a4d9673b5410b--libvterm-0.3.3.bottle_manifest.json
+==> Pouring libvterm--0.3.3.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/libvterm/0.3.3: 13 files, 393.2KB
+==> Installing neovim dependency: msgpack
+==> Downloading https://ghcr.io/v2/homebrew/core/msgpack/manifests/6.1.0
+Already downloaded: /Users/vinodakshat/Library/Caches/Homebrew/downloads/64deb06ebbeaaf491c089ce032ab47d3a2fd7017a0d42f92620a8feed75d9e28--msgpack-6.1.0.bottle_manifest.json
+==> Pouring msgpack--6.1.0.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/msgpack/6.1.0: 39 files, 210.1KB
+==> Installing neovim dependency: libunistring
+==> Downloading https://ghcr.io/v2/homebrew/core/libunistring/manifests/1.3
+Already downloaded: /Users/vinodakshat/Library/Caches/Homebrew/downloads/a570da63bc1839c7e217f203abd54d4d873ebd6b99f6e88994d0e79e2ebe987c--libunistring-1.3.bottle_manifest.json
+==> Pouring libunistring--1.3.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/libunistring/1.3: 59 files, 5.4MB
+==> Installing neovim dependency: libuv
+==> Downloading https://ghcr.io/v2/homebrew/core/libuv/manifests/1.49.2
+Already downloaded: /Users/vinodakshat/Library/Caches/Homebrew/downloads/a32b5abd59fa5add407c237e71c8ccb52eca9bed1740be5e315b1bea6efde148--libuv-1.49.2.bottle_manifest.json
+==> Pouring libuv--1.49.2.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/libuv/1.49.2: 20 files, 1.2MB
+==> Installing neovim dependency: lpeg
+==> Downloading https://ghcr.io/v2/homebrew/core/lpeg/manifests/1.1.0-1
+Already downloaded: /Users/vinodakshat/Library/Caches/Homebrew/downloads/5906a2786f22dd74352335366e9b152ed78248ffa0b9aefb61209bbcdfb96581--lpeg-1.1.0-1.bottle_manifest.json
+==> Pouring lpeg--1.1.0.arm64_sequoia.bottle.1.tar.gz
+🍺  /opt/homebrew/Cellar/lpeg/1.1.0: 14 files, 316.8KB
+==> Installing neovim dependency: luajit
+==> Downloading https://ghcr.io/v2/homebrew/core/luajit/manifests/2.1.1727870382
+Already downloaded: /Users/vinodakshat/Library/Caches/Homebrew/downloads/6c25c463103c086fb7952a36077cb26c40279952cab530756714623c7eee0972--luajit-2.1.1727870382.bottle_manifest.json
+==> Pouring luajit--2.1.1727870382.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/luajit/2.1.1727870382: 56 files, 2.1MB
+==> Installing neovim dependency: luv
+==> Downloading https://ghcr.io/v2/homebrew/core/luv/manifests/1.48.0-2
+Already downloaded: /Users/vinodakshat/Library/Caches/Homebrew/downloads/35e34648f227188d25ae472d9d07df6a21b470ee9ff657b78ef9f23dd5d43fb4--luv-1.48.0-2.bottle_manifest.json
+==> Pouring luv--1.48.0-2.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/luv/1.48.0-2: 16 files, 857KB
+==> Installing neovim dependency: tree-sitter
+==> Downloading https://ghcr.io/v2/homebrew/core/tree-sitter/manifests/0.24.3
+Already downloaded: /Users/vinodakshat/Library/Caches/Homebrew/downloads/ee81979adc69e4743cfc4828b2fc21160330ff29ccec504ffadb67c14aeeb32b--tree-sitter-0.24.3.bottle_manifest.json
+==> Pouring tree-sitter--0.24.3.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/tree-sitter/0.24.3: 15 files, 15.2MB
+==> Installing neovim dependency: unibilium
+==> Downloading https://ghcr.io/v2/homebrew/core/unibilium/manifests/2.1.2
+Already downloaded: /Users/vinodakshat/Library/Caches/Homebrew/downloads/2d9cd8927f7cd1da5e432d934cb2f5c4d09314fba2531033031bca58d817cb1c--unibilium-2.1.2.bottle_manifest.json
+==> Pouring unibilium--2.1.2.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/unibilium/2.1.2: 64 files, 327.7KB
+==> Installing neovim
+==> Pouring neovim--0.10.2_1.arm64_sequoia.bottle.tar.gz
+==> Caveats
+`--HEAD` installs also require:
+  brew install --HEAD utf8proc
+==> Summary
+🍺  /opt/homebrew/Cellar/neovim/0.10.2_1: 1,902 files, 29.8MB
+==> Running `brew cleanup neovim`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+==> Caveats
+==> neovim
+`--HEAD` installs also require:
+  brew install --HEAD utf8proc
+vinodakshat@vinods-MacBook-Air ~ % neovim --version   
+zsh: command not found: neovim
+vinodakshat@vinods-MacBook-Air ~ % nvim --version
+NVIM v0.10.2
+Build type: Release
+LuaJIT 2.1.1727870382
+Run "nvim -V1 -v" for more info
+vinodakshat@vinods-MacBook-Air ~ % ls
+Applications			IdeaProjects			Oracle				calculator.java			frst.class			me.java
+Desktop				Library				Pictures			codecrafters-http-server-c	iCloud Drive (Archive)		recursion.class
+Documents			Movies				Postman				development 			import java.util.java		recursion.java
+Downloads			Music				Public				first class			main.java			test
+vinodakshat@vinods-MacBook-Air ~ % cd Desktop 
+vinodakshat@vinods-MacBook-Air Desktop % ls    
+Screenshot 2024-10-23 at 2.32.10 PM.png		Screenshot 2024-10-25 at 11.53.57 AM.png	cp hw						module-1
+Screenshot 2024-10-25 at 11.38.50 AM.png	ankrit test					dev						screenshots
+Screenshot 2024-10-25 at 11.38.57 AM.png	college						java programming language			test
+Screenshot 2024-10-25 at 11.52.20 AM.png	cp						jj.py						untitled folder
+vinodakshat@vinods-MacBook-Air Desktop % cd dev
+vinodakshat@vinods-MacBook-Air dev % mkdir rust
+vinodakshat@vinods-MacBook-Air dev % cd rust
+vinodakshat@vinods-MacBook-Air rust % mkdir hello_world
+vinodakshat@vinods-MacBook-Air rust % cd hello_world 
+vinodakshat@vinods-MacBook-Air hello_world % nvim main.rs
+
+fn main() {
+    println!("Hello, World!");
+}
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+main.rs [+]                                                                                                                                                                               3,1            All
+                                                                                                                                                                                                           
