@@ -17,13 +17,20 @@ async fn echo(req_body: String) -> impl Responder {
 async fn manual_hello() -> impl Responder {
     HttpResponse::Ok().body("Hey there!")
 }
+use std::env;
+
 async fn serve_html() -> impl Responder {
-    let html_content = fs::read_to_string("static/index.html")
+    let path = env::current_dir().unwrap();
+    println!("Current working directory: {}", path.display());
+    
+    let html_content = fs::read_to_string("index.html")
         .unwrap_or_else(|_| "Error loading index.html".to_string());
     HttpResponse::Ok()
         .content_type("text/html; charset=utf-8")
         .body(html_content)
 }
+
+
 async fn index() -> impl Responder {
     "Html code !"
 }
